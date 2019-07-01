@@ -1,0 +1,151 @@
+%title {
+	color: c(dark);
+}
+
+/* H o m e */
+%titulo-post-recuadro, .titulo-post-recuadro {
+	@extend %text-play-regular;
+	@extend %title;
+	font-size: 27px;
+	line-height: 29px;
+	@include under(sm){
+		font-size: 22px;
+	}
+}
+
+%categoria-post-recuadro, .categoria-post-recuadro {
+	@extend %text-sharp-bold;
+	@extend %title;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 1.8px;
+	text-transform: uppercase;
+	@include under(sm){
+		font-size: 12px;
+	}
+}
+
+%last-post-home-titulo {
+	@extend %text-play-regular;
+	@extend %title;
+	font-size: 30px;
+	line-height: 34px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 1px #000000;
+	@include under(mobile){
+		font-size: 24px;
+	}
+}
+
+/* S i n g l e   p a g e */
+%titulo-single-page-post, .titulo-single-page-post {
+	@extend %text-play-regular;
+	@extend %title;
+	font-size: 23px;
+	line-height: 28px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 1px #000000;
+	@include under(mobile){
+		font-size: 18px;
+	}
+}
+
+%subtitulo-single-page-post, .subtitulo-single-page-post {
+	@extend %text-play-italic;
+	@extend %title;
+	font-size: 16px;
+	line-height: 19px;
+	@include under(sm){
+		font-size: 13px;
+	}
+}
+
+%categoria-single-page-post, .categoria-single-page-post {
+	@extend %text-play-regular;
+	@extend %title;
+	font-size: 26px;
+	line-height: 30px;
+	text-decoration: underline;
+	@include under(sm){
+		font-size: 20px;
+	}
+}
+
+/* N o t a */
+%ultima-nota-titulo {
+	@extend %text-play-regular;
+	@extend %title;
+	font-size: 30px;
+	line-height: 34px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 1px #000000;
+	@include under(mobile){
+		font-size: 24px;
+	}
+}
+
+/* E d i c i o n e s   a n t e r i o r e s */
+%titulo-ediciones, .titulo-ediciones {
+	@extend %text-sharp-medium;
+	@extend %title;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+%numero-ediciones, .numero-ediciones {
+	@extend %text-sharp-medium;
+	@extend %title;
+	font-size: 12px;
+	width: 13px;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 14px;
+}
+
+%titulo-edicion-anterior-recuadro, .titulo-edicion-anterior-recuadro {
+	@extend %text-play-regular;
+	@extend %title;
+	font-size: 23px;
+	line-height: 28px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 1px #000000;
+	@include under(mobile){
+		font-size: 18px;
+	}
+}
+
+%categoria-edicion-anterior-recuadro, .categoria-edicion-anterior-recuadro {
+	@extend %categoria-post-recuadro;
+}
+
+%page-template-titulo {
+	@extend %text-play-regular;
+	@extend %title;
+	font-size: 23px;
+	line-height: 28px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 1px #000000;
+	@include under(mobile){
+		font-size: 18px;
+	}
+}
+
+/* P u n t o s   d e   v e n t a */
+%titulo-puntos-venta-page, .titulo-puntos-venta-page {
+	@extend %titulo-single-page-post;
+}
+
+%suscribete-puntos-ventas , .suscribete-puntos-ventas {
+	@extend %subtitulo-single-page-post;
+}
+
+%precio-puntos-ventas, .precio-puntos-ventas {
+	@extend %subtitulo-single-page-post;
+}
+
+%zona-puntos-venta, .zona-puntos-venta {
+    @extend %domicilio-puntos-venta;
+	text-transform: uppercase;
+	text-decoration: underline;
+}

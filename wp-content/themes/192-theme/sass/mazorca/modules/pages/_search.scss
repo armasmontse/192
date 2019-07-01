@@ -1,0 +1,25 @@
+.resultados {
+
+	&__contenedor {
+
+	}
+
+	&__titulo {
+		@extend %titulo-single-page-post;
+		margin-bottom: 30px;
+	}
+
+	.logo {
+		width: 215px;
+		margin: 40px auto;
+		@include under(md) {
+			margin: 40px auto;
+		}
+		@include under(mobile) {
+			margin: 0 auto;
+		}
+		@include under(xs) {
+			width: 80%;
+		}
+	}
+}

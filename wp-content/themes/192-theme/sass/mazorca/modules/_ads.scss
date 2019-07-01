@@ -1,0 +1,18 @@
+.ads {
+    &__leaderboard {
+        margin: 10px 0;
+
+        &.empty {
+            margin: 10px auto;
+            border: 1px dashed #666;
+            width: 100%;
+            max-width: 728px;
+            height: 90px;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

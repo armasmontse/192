@@ -1,0 +1,24 @@
+/* A r c h i v o   c a t e g o r i a */
+.archivo-categoria {
+	width: 100%;
+
+	.link-leer-mas {
+		@extend %leer-mas;
+		margin: 60px auto;
+	}
+
+	.linea-division{
+		margin-bottom: 30px;
+	}
+
+	.grid__col-1-8 {
+		@include under (sm) {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	.leer-mas {
+		margin-left: 46%;
+	}
+}

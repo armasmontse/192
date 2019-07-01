@@ -1,0 +1,43 @@
+//_________________________ Config:Fuentes _________________________ \\
+
+/**
+ * Declare fonts using the Mixin
+ */
+// declara-font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal, $font-stretch: normal)
+
+
+@include declara-font-face(PlayfairDisplay, '../fonts/PlayfairDisplay/PlayfairDisplay-Italic', normal, italic);
+@include declara-font-face(PlayfairDisplay, '../fonts/PlayfairDisplay/PlayfairDisplay-Regular', normal, normal);
+
+
+@include declara-font-face(SharpSansNoOne, '../fonts/SharpSansNoOne/SharpSansNoOne-Bold', bold, normal);
+@include declara-font-face(SharpSansNoOne, '../fonts/SharpSansNoOne/SharpSansNoOne-Medium', 500, normal);
+@include declara-font-face(SharpSansNoOne, '../fonts/SharpSansNoOne/SharpSansNoOne-Semibold', 600, normal);
+
+
+
+// A t l a
+@include declara-font-face(Value, '../fonts/Value-Black', normal, normal);
+@include declara-font-face(Value, '../fonts/Value-Bold', bold, normal );
+@include declara-font-face(Value, '../fonts/Value-BoldItalic', bold, italic);
+@include declara-font-face(Value, '../fonts/Value-Italic', normal, italic);
+@include declara-font-face(Value, '../fonts/Value-Medium', 500, normal);
+@include declara-font-face(Value, '../fonts/Value-MediumItalic', 500, italic);
+@include declara-font-face(Value, '../fonts/Value-Regular', normal, normal);
+
+
+
+/// Refer to font families through mapped variables.
+/// Font families must be written as lists, that is, between parenthesis.
+///
+///
+$fonts:(
+	Sharp:		('SharpSansNoOne', serif),
+	Play:		('PlayfairDisplay', serif),
+
+	value: 		('Value', serif)
+);
+
+@function f($font) {
+	@return map-get($fonts, $font);
+}

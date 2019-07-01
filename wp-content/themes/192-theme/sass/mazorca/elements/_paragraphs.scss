@@ -1,0 +1,154 @@
+/* Á t o m o s   d e   f u e n t e s */
+
+%text-sharp-bold {
+    font-family: f(Sharp);
+    font-weight: bold;
+}
+
+%text-sharp-semibold {
+    font-family: f(Sharp);
+    font-weight: 600;
+}
+
+%text-sharp-medium {
+    font-family: f(Sharp);
+    font-weight: 500;
+}
+
+%text-play-italic {
+    font-family: f(Play);
+    font-weight: normal;
+    font-style: italic;
+}
+
+%text-play-regular {
+    font-family: f(Play);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* H o m e */
+%extracto-post-recuadro, .extracto-post-recuadro {
+	@extend %text-play-regular;
+	font-size: 14px;
+    line-height: 21px;
+	color: c(dark);
+}
+
+/* E d i c i ó n */
+%titulo-pleca-suscripcion, .titulo-pleca-suscripcion {
+    @extend %text-play-regular;
+    font-size: 22px;
+    line-height: 21px;
+    color: c(black);
+}
+
+%subtitulo-pleca-suscripcion, .subtitulo-pleca-suscripcion {
+    @extend %text-play-regular;
+    font-size: 15px;
+    line-height: 21px;
+    color: c(gray);
+}
+
+
+/* S i n g l e   p a g e */
+%contenido-single-page-post, .contenido-single-page-post {
+	@extend %text-sharp-medium;
+	font-size: 15px;
+	color: c(dark);
+    line-height: 26px;
+}
+
+%vertical-single-page-post, .vertical-single-page-post {
+	@extend %text-sharp-medium;
+	font-size: 14px;
+	color: c(gray);
+    width: 15px;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* N o t a */
+%contenido-texto-nota, .contenido-texto-nota {
+    @extend %text-sharp-medium;
+    font-size: 17px;
+    color: c(dark);
+    line-height: 30px;
+}
+
+%contenido-frase-nota, .contenido-frase-nota {
+    @extend %text-sharp-medium;
+    font-size: 25px;
+    line-height: 40px;
+    color: c(dark);
+    text-transform: uppercase;   
+}
+
+%contenido-wysywyg-titulo-mayusculas {
+    @extend %text-play-regular;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+%contenido-wysywyg-subtitulo-italic {
+    @extend %text-play-italic;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+%contenido-pie-foto-nota, .contenido-pie-foto-nota {
+    @extend %text-sharp-medium;
+    font-size: 13px;
+    color: c(dark);
+}
+/* Ú l t i m a   n o t a */
+%categoria-ultima-nota, .categoria-ultima-nota {
+    @extend %text-sharp-medium;
+    @extend %title;
+    font-size: 16px;
+    line-height: 24px;
+    color: c(dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+/* E d i c i o n e s   a n t e r i o r e s */
+%numero-edicion-anterior-vertical, .numero-edicion-anterior-vertical {
+    @extend %text-sharp-medium;
+    @extend %title;
+    font-size: 12px;
+    width: 13px;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 14px;
+}
+
+%extracto-edicion-anterior-recuadro , .extracto-edicion-anterior-recuadro{
+    @extend %extracto-post-recuadro;
+}
+
+%numero-edicion-anterior-horizontal , .numero-edicion-anterior-horizontal{
+    @extend %contenido-pie-foto-nota;
+}
+
+/* P u n t o s   d e   v e n t a */
+%sucursal-puntos-venta, .sucursal-puntos-venta {
+    @extend %label-newsletter-footer;
+    color: c(dark) !important;
+}
+
+%domicilio-puntos-venta, .domicilio-puntos-venta {
+    @extend %text-play-regular;
+    font-size: 16px;
+    color: c(dark);
+}
+
+%web-puntos-venta, .web-puntos-venta {
+    @extend %text-play-italic;
+    font-size: 16px;
+    color: c(dark);
+}

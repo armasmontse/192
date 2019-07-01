@@ -1,0 +1,306 @@
+$col-1: 100%/12;
+
+/* S i n g l e   p a g e */
+.single-page {
+
+	/*I m a g e n   u n a   c o l u m n a */
+	.img-one-column {
+		@extend %margintop30-20;
+
+		&__box {
+
+			&-aspect {
+				@extend %box-aspect-ratio;
+				padding-bottom: 58%;
+			}
+
+			&-imagen {
+				@extend %imagen-aspect-ratio;
+			}
+		}
+
+		&__pie-foto {
+			@extend %pie-foto-single-page;
+			@extend %margintop20-15;
+		}
+	}
+
+	/*I m a g e n   d o s  c o l u m n a s */
+	.img-two-columns {
+		width: 100%;
+		@extend %margintop30-20;
+
+		&__box {
+
+			&-aspect {
+				@extend %box-aspect-ratio;
+				padding-bottom: 132%;
+			}
+
+			&-imagen {
+				@extend %imagen-aspect-ratio;
+			}
+		}
+
+		&__pie-foto {
+			@extend %pie-foto-single-page;
+			@extend %margintop20-15;
+		}
+	}
+
+	/* C o n t e n i d o   w y s y w y g */
+	.wysywyg {
+
+		&__contenido {
+			@extend %content;
+		}
+	}
+	
+
+	/* S h a r e   r e d e s */
+	.share-single {
+
+		.lista-share-single {
+			display: flex;
+			justify-content: center;
+			margin: 30px 0;
+			@extend %margintop30-20;
+
+			&__item {
+				color: c(gray);
+				font-size: 20px;
+				margin: 0 10px;
+				&:hover {
+					color: c(dark);
+				}
+			}
+		}
+	}
+
+	/* V i d e o */
+	.video {
+		width: 100%;
+		@extend %margintop30-20;
+
+		&__box {
+
+			&-aspect {
+				@extend %box-aspect-ratio;
+				padding-bottom: 45%;
+
+				iframe {
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+				}
+
+			}
+
+		}
+
+		&__creditos {
+			@extend %pie-foto-single-page;
+			@extend %margintop20-15;
+			strong {
+				font-weight: bold;
+			}
+
+			a {
+				text-decoration: underline;
+			}
+		}
+
+		.suscripcion {
+			width: calc(100% / 12 * 1.8);
+
+			@include under(md) {
+				display: none;
+			}
+
+			&__contenedor {
+				width: 84%;
+				height: 95%;
+				margin: 0 auto;
+				display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			    justify-content: space-evenly;
+			}
+
+			&__portada {
+
+				&--aspect {
+					@extend %box-aspect-ratio;
+					padding-bottom: 142%;
+				}
+
+				&--imagen {
+					@extend %imagen-aspect-ratio;
+				}
+			}
+
+			&__titulo {
+				@extend %label-suscripcion-lateral;
+			}
+
+			&__cta {
+				@extend %boton-suscripcion-lateral;
+				width: 100% !important;
+			}
+		}
+	}
+
+	/* Galeria slider */
+	.galeria {
+		width: 100%;
+		margin: 50px auto 20px;
+
+		&__box {
+			padding: 0 80px;
+			@include under(sm) {
+				padding: 0 60px;
+			}
+			@include under(mobile) {
+				padding: 0 30px;
+			}
+
+			&-imagen {
+				height: 90vh;
+    			width: auto;
+    			margin: 0 auto;
+    			object-fit: cover;
+    			@include under(sm) {
+    				object-fit: contain;
+    			}
+			}
+		}
+
+		&__pie-foto {
+			@extend %pie-foto-single-page;
+			@extend %margintop20-15;
+		}
+
+		&__slider {
+			display: flex;
+			outline: none !important;
+			
+			.slick-slide:focus {
+			    outline: none !important;
+			}
+
+		}
+
+		.slick-arrow {
+			width: 20px;
+			height: 35px;
+			position: absolute;
+			background-repeat: no-repeat;
+			top: 50%;
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+		&-prev {
+			background-image: url(../images/prev-slide.svg) !important;
+			left: 3%;
+			@include under(mobile) {
+				left: 2%;
+			}
+		}
+
+		&-next {
+			background-image: url(../images/next-slide.svg) !important;
+			left: 96%;
+			@include under(mobile) {
+				left: 94%;
+			}
+		}
+	}
+	
+
+	/* G r i d */
+	.grid__col-1-8 {
+		@include under(sm) {
+			width: 100%;
+			margin: 0 30px;
+		}
+	}
+}
+
+.wysywyg__contenido {
+	@extend %contenido-single-page-post;
+	@extend %margintop30-20;
+
+	p {
+		text-align: justify;
+
+		iframe {
+		    margin: 30px auto !important;
+			display: flex;
+			@include under(mobile) {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	h2 {
+		@extend %contenido-frase-nota;
+		text-align: right;
+		width: 65%;
+		float: right;
+	}
+
+	h4 {
+		@extend %contenido-wysywyg-titulo-mayusculas;
+	}
+
+	h5,
+	em {
+		@extend %contenido-wysywyg-subtitulo-italic;
+	}
+
+	strong,
+	b {
+		font-weight: bold;
+	}
+
+	ul {
+		border-left: 1px solid c(dark);
+		padding-left: 30px;
+		
+		li {
+			&::before { 
+			    content: "\2022";
+			    margin-right: 5px;
+			}	
+		} 
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		margin: 25px auto;
+	}
+
+	div.cols-2 {
+		display: flex;
+
+		& > * {
+			width: 50%;
+			margin: 10px 10px 25px;
+		}
+	}
+
+	.column {
+		text-align: justify;
+	}
+}

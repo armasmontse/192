@@ -1,0 +1,74 @@
+/* E d i c i o n e s   a n t e r i o r e s */
+.ediciones-anteriores {
+	width: 100%;
+	display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    @include under(md) {
+		width: 96%;
+		margin: 0 auto;
+    }
+    @include under(sm) {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+    }
+
+	&__titulo {
+		@extend %titulo-ediciones;
+		margin: 30px auto 60px;
+	}
+
+	&__box {
+		margin-bottom: 30px;
+
+		&-aspect {
+			@extend %box-aspect-ratio;
+			padding-bottom: 68%;
+		}
+
+		&-imagen {
+			@extend %imagen-aspect-ratio;
+		}
+	}
+
+	&__titulo-post {
+		@extend %titulo-edicion-anterior-recuadro;
+		margin-top: -27px;
+
+		&--transparent {
+			height: 10px;
+		}
+	}
+
+	&__categoria-post {
+		@extend %categoria-post-recuadro;
+		@extend %margintop30-20;
+	}
+
+	&__extracto-post {
+		@extend %extracto-edicion-anterior-recuadro;
+		@extend %margintop20-15;
+	}
+
+	&__numero-horizontal {
+		@extend %numero-edicion-anterior-horizontal;
+		@extend %margintop20-15;
+	}
+
+	
+	&__back-gris {
+		background: #F1F1F1;
+		width: 100%;
+		padding: 30px 30px 60px;
+		display: flex;
+		@include under(xs) {
+			padding: 20px 20px 30px;
+		}
+	}
+
+	&__numero-vertical {
+		@extend %numero-edicion-anterior-vertical;
+		margin-right: 40px;
+	}
+}

@@ -1,0 +1,49 @@
+%button {
+	@extend %text-play-regular;
+	font-size: 15px;
+	color: c(gray);
+    display: flex;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+	border: 1px solid #bdbdbd;
+	text-transform: lowercase;
+}
+/* S u s c r i p c i ó n   l a t e r a l */
+%boton-suscripcion-lateral, .boton-suscripcion-lateral {
+	@extend %button;
+	border: 1px solid c(dark); 
+	color: c(dark);
+	background: c(white);
+	&:hover {
+		background: c(beige);
+		border: 1px solid c(beige);
+		color: c(gray);
+	}
+}
+
+/* P l e c a   s u s c r i p c i ó n */
+%boton-pleca-suscripcion, .boton-pleca-suscripcion {
+	@extend %button;
+	color: c(black);
+	border: 1px solid c(black);
+	background: c(beige);
+	&:hover{
+		background: c(white);
+		border: 1px solid c(white)
+	}
+}
+
+/* P u n t o s   d e   v e n t a */
+%boton-compra-puntos-venta, .boton-compra-puntos-venta {
+	@extend %button;
+	background: c(white);
+	border-color: c(dark);
+	color: c(dark);
+	&:hover{
+		background: c(beige);
+		border: 1px solid c(beige);
+		color: c(gray);
+	}
+}

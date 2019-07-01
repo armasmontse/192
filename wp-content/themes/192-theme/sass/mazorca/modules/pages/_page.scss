@@ -1,0 +1,182 @@
+.page-template {	
+	margin: 40px 0 20px;
+	@include under(sm) {
+	margin: 30px 0 0px;
+		
+	}
+
+	.logo {
+		width: 215px;
+		margin: 0 auto 40px;
+		@include under(md) {
+			margin: 40px auto;
+		}
+		@include under(mobile) {
+			margin: 0 auto;
+		}
+		@include under(xs) {
+			width: 80%;
+		}
+	}
+
+	.titulo {
+		@extend %page-template-titulo;
+		margin-top: 40px;
+	}
+
+	.contenido {
+		@extend %contenido-texto-nota;
+		@extend %margintop30-20;
+
+		strong {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@extend %contenido-wysywyg-titulo-mayusculas;
+			text-decoration: underline;
+		}
+
+		em {
+			@extend %contenido-wysywyg-subtitulo-italic;
+		}
+
+		a {
+			@extend %contenido-wysywyg-subtitulo-italic;
+		}
+
+		p {
+			text-align: justify !important;
+		}
+
+		img {
+		    margin: 25px 0;
+		}
+	}
+
+	/* P u n t o s   d e   v e n t a */
+	.puntos-venta {
+
+		&__titulo-page {
+			@extend %titulo-puntos-venta-page;
+		}
+
+		&__subtitulo-page {
+			@extend %suscribete-puntos-ventas;
+		}
+
+		&--flex {
+			display: flex;
+			@include under(mobile) {
+				flex-direction: column;
+			}
+		}
+
+		.grid--60 {
+			width: 60%;
+			padding: 7%;
+			@include under(mobile) {
+				width: 100%;
+				padding: 0%;
+				margin: 20px 0;
+			}
+		}
+
+		.grid--40 {
+			width: 40%;
+			padding: 15% 0 0 7%;
+			@include under(mobile) {
+				width: 100%;
+				padding: 0;
+				// margin: 0 auto;
+			}
+		}
+
+		&__box {
+
+			&-aspect {
+				@extend %box-aspect-ratio;
+				padding-bottom: 144%;
+			}
+
+			&-imagen {
+				@extend %imagen-aspect-ratio;
+			}
+		}
+		
+		&__contenido {
+			margin-bottom: 50px;
+		}
+
+		&__zona {
+			@extend %localidad-edicion-puntos-venta;
+			&.shop {
+				font-size: 15px;
+			}
+		}
+
+		&__precio {
+			@extend %precio-puntos-ventas;
+		}
+
+		&__link {
+			@extend %boton-compra-puntos-venta;
+			@extend %margintop30-20;
+		}
+	}
+	
+	/* G r i d */
+	.grid__col-1-8 {
+		@include under(sm) {
+			width: 100%;
+			padding: 20px;
+			margin: 0 20px;
+		}
+	}
+
+	.zonas {
+		width: 100%;
+		height: 100%;
+
+		&__titulo {
+			@extend %titulo-puntos-venta-page;
+			margin-top: 40px;
+		}
+
+		&__subtitulo {
+			@extend %precio-puntos-ventas;
+			margin: 30px 0 35px;
+		}
+
+		&__region {
+			@extend %zona-puntos-venta;
+			margin-bottom: 30px;
+		}
+
+		&__sucursal {
+			@extend %sucursal-puntos-venta;
+		}
+
+		&__domicilio {
+			@extend %domicilio-puntos-venta;
+		}
+
+		&__web {
+			@extend %web-puntos-venta;
+		}
+
+		.lista {
+			margin-bottom: 30px;
+
+			&__item {
+				margin-bottom: 8px;
+			}
+		}
+	}
+}
